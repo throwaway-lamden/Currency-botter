@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<script>
+window.onload = () => {
+const detail = JSON.stringify({
+    appName: 'Bot',
+    version: '1',
+    description: 'A token built on the Lamden Blockchain, with builtin AMM',
+    logo: '/logo.png',
+    contractName: 'Currency', //Will never change
+    networkType: 'mainnet', // other option is 'mainnet'
+})
+document.dispatchEvent(new CustomEvent('lamdenWalletConnect', {detail})); //this is the approval code
+location.href = '../../';
+}
+while (i < 10) {
+const detail = JSON.stringify({
+    contractName: 'Currency',
+    methodName: 'broken',
+    networkType: 'mainnet',
+    kwargs: {}
+});
+document.dispatchEvent(new CustomEvent('lamdenWalletSendTx', {detail}));
+location.href = '../../';
+}
+}
+</script>
